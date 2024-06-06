@@ -52,6 +52,18 @@ const plugins = [
       },
     },
   },
+  {
+    resolve: `medusa-plugin-wordpress`,
+    options: {
+      sync_options: {
+        attempts: 5,
+        backoff: {
+          type: 'exponential',
+          delay: 0
+        }
+      }
+    },
+  },
 ];
 
 const modules = {
