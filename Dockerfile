@@ -1,5 +1,5 @@
 
-FROM node:lts
+FROM node:17.1.0
 
 WORKDIR /app
 
