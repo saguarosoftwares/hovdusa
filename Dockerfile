@@ -5,12 +5,9 @@ WORKDIR /app/medusa
 
 COPY package.json .
 
-# RUN apk update
-
 RUN apt-get update
 
 RUN apt-get install -y python
-#RUN apk add --no-cache python3
 
 RUN npm install -g npm@8.1.2
 
