@@ -16,8 +16,9 @@ RUN npm install -g @medusajs/medusa-cli@latest
 RUN npm install --legacy-peer-deps
 
 COPY . .
-COPY docker-entrypoint.sh /
-RUN chmod +x /docker-entrypoint.sh
+
+# Ensure the docker-entrypoint.sh script has executable permissions
+RUN chmod +x /app/medusa/docker-entrypoint.sh
 
 EXPOSE 9000
-ENTRYPOINT ["./docker-entrypoint.sh", "start"]
+ENTRYPOINT ["/app/medusa/docker-entrypoint.sh", "start"]
