@@ -20,4 +20,4 @@ COPY docker-entrypoint.sh /
 RUN chmod +x /docker-entrypoint.sh
 
 EXPOSE 9000
-ENTRYPOINT ["/bin/sh", "/docker-entrypoint.sh"]
+ENTRYPOINT ["./docker-entrypoint.sh", "start"]

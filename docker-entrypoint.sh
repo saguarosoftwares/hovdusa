@@ -1,7 +1,7 @@
 #!/bin/bash
 
-# Run the migrations
-# npx medusa migrations run
+npm run build
 
-# Start server
-yarn start
+medusa migrations run
+
+medusa $1
