@@ -1,19 +1,20 @@
-
-FROM node:17.1.0
+FROM node:16
 
 WORKDIR /app/medusa
 
 COPY package.json .
+COPY yarn.lock .
+
 
 RUN apt-get update
 
 RUN apt-get install -y python
 
-RUN npm install -g npm@8.1.2
+# RUN npm install -g yarn
 
-RUN npm install -g @medusajs/medusa-cli@latest
+RUN yarn global add @medusajs/medusa-cli@latest
 
-RUN npm install --legacy-peer-deps
+RUN yarn install --legacy-peer-deps
 
 COPY . .
 

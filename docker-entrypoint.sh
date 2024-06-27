@@ -1,6 +1,6 @@
 #!/bin/bash
 
-npm run build
+yarn build
 
 medusa migrations run
 
