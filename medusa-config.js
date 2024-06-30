@@ -61,6 +61,13 @@ const plugins = [
       access_key_id: process.env.MINIO_ACCESS_KEY,
       secret_access_key: process.env.MINIO_SECRET_KEY,
     },
+  },
+  {
+    resolve: `medusa-payment-stripe`,
+    options: {
+      api_key: process.env.STRIPE_API_KEY,
+      // webhook_secret: process.env.STRIPE_WEBHOOK_SECRET, #TODO - only needed for production
+    },
   }
 ];
 

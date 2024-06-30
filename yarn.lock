@@ -13415,7 +13415,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"medusa-payment-stripe@npm:latest":
+"medusa-payment-stripe@npm:^6.0.9":
   version: 6.0.9
   resolution: "medusa-payment-stripe@npm:6.0.9"
   dependencies:
@@ -13483,7 +13483,7 @@ __metadata:
     medusa-fulfillment-manual: "npm:latest"
     medusa-interfaces: "npm:latest"
     medusa-payment-manual: "npm:latest"
-    medusa-payment-stripe: "npm:latest"
+    medusa-payment-stripe: "npm:^6.0.9"
     prism-react-renderer: "npm:^2.0.4"
     rimraf: "npm:^3.0.2"
     ts-jest: "npm:^27.0.7"
